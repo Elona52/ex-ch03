@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.demo.calculator.dto;
 
 public record CalculationResponse(
 		double num1,

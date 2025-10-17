@@ -16,13 +16,13 @@ public class ExService {
 
 	private static final Logger log = LoggerFactory.getLogger(ExService.class);
 
-	public String sayHello(String hi) {
-		String msg = hi + " 좋은날";
-		System.out.println(msg);
-		log.info(msg);
-		log.warn(msg);
-		return msg;
-	}
+//	public String sayHello(String hi) {
+//		String msg = hi + " 좋은날";
+//		System.out.println(msg);
+//		log.info(msg);
+//		log.warn(msg);
+//		return msg;
+//	}
 
 	public String ex321() {
 

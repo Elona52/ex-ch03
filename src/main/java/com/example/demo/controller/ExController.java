@@ -15,15 +15,11 @@ public class ExController {
 		this.exService = exService;
 	}
 
+	
 //	@GetMapping("/")
 //	public String getMethodName() {
-//		return "루트경로";
+//		return exService.sayHello("안녕");
 //	}
-	
-	@GetMapping("/")
-	public String getMethodName() {
-		return exService.sayHello("안녕");
-	}
 	
 	@GetMapping("/ex321")
 	public String getEx321() {

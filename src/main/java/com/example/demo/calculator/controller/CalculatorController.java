@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.calculator.dto.CalculationRequest;
+import com.example.demo.calculator.dto.CalculationResponse;
 import com.example.demo.calculator.service.CalculatorService;
-import com.example.demo.dto.CalculationResponse;
 
 @RestController
 public class CalculatorController {
