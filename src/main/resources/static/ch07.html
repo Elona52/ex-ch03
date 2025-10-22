@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-3-1</title>
+</head>
+
+<body>
+
+    <script>
+        function onReadyStateChange(event) {
+            if (ajaxRequest.readyState === XMLHttpRequest.DONE) {
+                if (ajaxRequest.status === 200) {
+                    console.log(ajaxRequst.responseText);
+                } else {
+                    console.error('reaquest fail')
+                }
+            }
+        }
+
+        const ajaxRequest = new XMLHttpRequest();
+
+        ajaxRequest.onreadystatechange = onReadyStateChange;
+        ajaxRequest.open('GET', '/get-with-no-parameter');
+        ajaxRequest.send();
+    </script>
+
+</body>
+
+</html>

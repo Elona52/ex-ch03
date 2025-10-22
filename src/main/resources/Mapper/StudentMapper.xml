@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mybatis.mapper.MybatisStudentMapper">
+
+  <!-- 전체 학생 조회 -->
+  <select id="findAll" resultType="com.example.mybatis.domain.Student">
+    SELECT * FROM student ORDER BY id DESC
+  </select>
+
+  <!-- ID로 한 명 조회 -->
+  <select id="findById" resultType="com.example.mybatis.domain.Student" parameterType="long">
+    SELECT * FROM student WHERE id = #{id}
+  </select>
+  
+  <!-- 학생 정보 insert -->
+  <insert id="insert" parameterType="com.example.mybatis.domain.Student" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO student (name, email, age)
+    VALUES (#{name}, #{email}, #{age})
+  </insert>
+  
+  <!-- 학생 정보 update -->
+  <update id="update" parameterType="com.example.mybatis.domain.Student">
+  	UPDATE student
+  	SET name = #{name},
+      email = #{email},
+      age = #{age}
+  	WHERE id = #{id}
+	</update>
+
+	<!-- 학생 정보 delete -->
+	<delete id="delete" parameterType="long">
+  	DELETE FROM student WHERE id = #{id}
+	</delete>
+
+
+</mapper>

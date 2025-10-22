@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ex-ch03
+
+  mustache:
+    prefix: classpath:/templates/
+    suffix: .mustache
+    cache: false
+
+logging:
+  level:
+    root: info
+    com.example.demo: debug
+    com.example.demo.service: debug
+
+file:
+  name: logs/app.log
