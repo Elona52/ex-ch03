@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.mybatis.domain.Student;
-import com.example.mybatis.mapper.MybatisStudentMapper;
+import com.example.mybatis.mapper.StudentMapper;
 
 import lombok.RequiredArgsConstructor;
 
@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 @Transactional(readOnly = true)
 public class StudentService {
 
-	private final MybatisStudentMapper studentMapper;
+	private final StudentMapper studentMapper;
 
 	public List<Student> getAllStudents() {
 

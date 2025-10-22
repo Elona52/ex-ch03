@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import com.example.mybatis.domain.Student;
 
 @Mapper
-public interface MybatisStudentMapper {
+public interface StudentMapper {
 
 	List<Student> findAll();
 
